@@ -10,7 +10,6 @@ servers:
 
 security:
   - ApiKeyAuth: []
-  - ApiKeyQuery: []
 
 tags:
   - name: Ontologies
@@ -29,6 +28,11 @@ paths:
         - $ref: '#/components/parameters/ApiKeyQuery'
         - $ref: '#/components/parameters/Page'
         - $ref: '#/components/parameters/PageSize'
+        - $ref: '#/components/parameters/Include'
+        - $ref: '#/components/parameters/Format'
+        - $ref: '#/components/parameters/IncludeViews'
+        - $ref: '#/components/parameters/DisplayContext'
+        - $ref: '#/components/parameters/DisplayLinks'
       responses:
         '200':
           description: A list of ontologies.
@@ -66,6 +70,11 @@ paths:
       parameters:
         - $ref: '#/components/parameters/Acronym'
         - $ref: '#/components/parameters/ApiKeyQuery'
+        - $ref: '#/components/parameters/Include'
+        - $ref: '#/components/parameters/Format'
+        - $ref: '#/components/parameters/IncludeViews'
+        - $ref: '#/components/parameters/DisplayContext'
+        - $ref: '#/components/parameters/DisplayLinks'
       responses:
         '200':
           description: Ontology details.
@@ -101,6 +110,10 @@ paths:
         - $ref: '#/components/parameters/ApiKeyQuery'
         - $ref: '#/components/parameters/Page'
         - $ref: '#/components/parameters/PageSize'
+        - $ref: '#/components/parameters/Include'
+        - $ref: '#/components/parameters/Format'
+        - $ref: '#/components/parameters/DisplayContext'
+        - $ref: '#/components/parameters/DisplayLinks'
       responses:
         '200':
           description: A list of classes in the ontology.
@@ -144,6 +157,10 @@ paths:
         - $ref: '#/components/parameters/Acronym'
         - $ref: '#/components/parameters/ClassId'
         - $ref: '#/components/parameters/ApiKeyQuery'
+        - $ref: '#/components/parameters/Include'
+        - $ref: '#/components/parameters/Format'
+        - $ref: '#/components/parameters/DisplayContext'
+        - $ref: '#/components/parameters/DisplayLinks'
       responses:
         '200':
           description: Class details.
@@ -183,9 +200,24 @@ paths:
         - $ref: '#/components/parameters/ApiKeyQuery'
         - $ref: '#/components/parameters/Q'
         - $ref: '#/components/parameters/Ontologies'
+        - $ref: '#/components/parameters/Ontology'
+        - $ref: '#/components/parameters/SubtreeRootId'
+        - $ref: '#/components/parameters/RootsOnly'
+        - $ref: '#/components/parameters/SemanticTypes'
+        - $ref: '#/components/parameters/CUI'
+        - $ref: '#/components/parameters/RequireExactMatch'
+        - $ref: '#/components/parameters/Suggest'
+        - $ref: '#/components/parameters/AlsoSearchViews'
+        - $ref: '#/components/parameters/RequireDefinitions'
+        - $ref: '#/components/parameters/AlsoSearchProperties'
+        - $ref: '#/components/parameters/AlsoSearchObsolete'
+        - $ref: '#/components/parameters/Language'
         - $ref: '#/components/parameters/Page'
         - $ref: '#/components/parameters/PageSize'
         - $ref: '#/components/parameters/Include'
+        - $ref: '#/components/parameters/Format'
+        - $ref: '#/components/parameters/DisplayContext'
+        - $ref: '#/components/parameters/DisplayLinks'
       responses:
         '200':
           description: Search results.
@@ -231,6 +263,19 @@ paths:
         - $ref: '#/components/parameters/Text'
         - $ref: '#/components/parameters/Ontologies'
         - $ref: '#/components/parameters/SemanticTypes'
+        - $ref: '#/components/parameters/ExpandSemanticTypesHierarchy'
+        - $ref: '#/components/parameters/ExpandClassHierarchy'
+        - $ref: '#/components/parameters/ClassHierarchyMaxLevel'
+        - $ref: '#/components/parameters/ExpandMappings'
+        - $ref: '#/components/parameters/StopWords'
+        - $ref: '#/components/parameters/MinimumMatchLength'
+        - $ref: '#/components/parameters/ExcludeNumbers'
+        - $ref: '#/components/parameters/WholeWordOnly'
+        - $ref: '#/components/parameters/ExcludeSynonyms'
+        - $ref: '#/components/parameters/LongestOnly'
+        - $ref: '#/components/parameters/Format'
+        - $ref: '#/components/parameters/DisplayContext'
+        - $ref: '#/components/parameters/DisplayLinks'
       responses:
         '200':
           description: Annotations.
@@ -266,6 +311,17 @@ paths:
       parameters:
         - $ref: '#/components/parameters/ApiKeyQuery'
         - $ref: '#/components/parameters/Input'
+        - $ref: '#/components/parameters/InputType'
+        - $ref: '#/components/parameters/OutputType'
+        - $ref: '#/components/parameters/MaxElementsSet'
+        - $ref: '#/components/parameters/WC'
+        - $ref: '#/components/parameters/WA'
+        - $ref: '#/components/parameters/WD'
+        - $ref: '#/components/parameters/WS'
+        - $ref: '#/components/parameters/Ontologies'
+        - $ref: '#/components/parameters/Format'
+        - $ref: '#/components/parameters/DisplayContext'
+        - $ref: '#/components/parameters/DisplayLinks'
       responses:
         '200':
           description: Recommender results.
@@ -299,15 +355,9 @@ components:
   securitySchemes:
     ApiKeyAuth:
       type: apiKey
-      in: header
-      name: Authorization
-      description: Use header format `Authorization: apikey token=YOUR_KEY`.
-    ApiKeyQuery:
-      type: apiKey
       in: query
       name: apikey
       description: Use query parameter `apikey=YOUR_KEY`.
-
   parameters:
     ApiKeyQuery:
       name: apikey
@@ -315,7 +365,7 @@ components:
       required: false
       schema:
         type: string
-      description: API key (alternative to Authorization header).
+      description: API key.
     Acronym:
       name: acronym
       in: path
@@ -381,6 +431,120 @@ components:
       schema:
         type: string
       description: Comma-separated fields to include (e.g., prefLabel,synonym,definition).
+    Format:
+      name: format
+      in: query
+      required: false
+      schema:
+        type: string
+        enum: [json, jsonp, xml]
+      description: Response format (overrides Accept header).
+    IncludeViews:
+      name: include_views
+      in: query
+      required: false
+      schema:
+        type: boolean
+      description: Include ontology views in ontology-related calls.
+    DisplayContext:
+      name: display_context
+      in: query
+      required: false
+      schema:
+        type: boolean
+      description: Toggle JSON-LD context serialization (default true).
+    DisplayLinks:
+      name: display_links
+      in: query
+      required: false
+      schema:
+        type: boolean
+      description: Toggle hypermedia link serialization (default true).
+    DownloadFormat:
+      name: download_format
+      in: query
+      required: false
+      schema:
+        type: string
+        enum: [csv, rdf]
+      description: Alternative format for ontology downloads (where supported).
+    Language:
+      name: language
+      in: query
+      required: false
+      schema:
+        type: string
+      description: ISO 639-1 language code (e.g., en, fr).
+    Ontology:
+      name: ontology
+      in: query
+      required: false
+      schema:
+        type: string
+      description: Single ontology acronym (used for subtree and roots-only searches).
+    SubtreeRootId:
+      name: subtree_root_id
+      in: query
+      required: false
+      schema:
+        type: string
+      description: URI-encoded class IRI for subtree root.
+    RootsOnly:
+      name: roots_only
+      in: query
+      required: false
+      schema:
+        type: boolean
+      description: Restrict search to root classes only.
+    RequireExactMatch:
+      name: require_exact_match
+      in: query
+      required: false
+      schema:
+        type: boolean
+      description: Restrict to exact matches of the query.
+    Suggest:
+      name: suggest
+      in: query
+      required: false
+      schema:
+        type: boolean
+      description: Type-ahead suggestion mode.
+    AlsoSearchViews:
+      name: also_search_views
+      in: query
+      required: false
+      schema:
+        type: boolean
+      description: Include ontology views in search results.
+    RequireDefinitions:
+      name: require_definitions
+      in: query
+      required: false
+      schema:
+        type: boolean
+      description: Only return results with definitions.
+    AlsoSearchProperties:
+      name: also_search_properties
+      in: query
+      required: false
+      schema:
+        type: boolean
+      description: Search across class properties in addition to labels.
+    AlsoSearchObsolete:
+      name: also_search_obsolete
+      in: query
+      required: false
+      schema:
+        type: boolean
+      description: Include obsolete terms in search.
+    CUI:
+      name: cui
+      in: query
+      required: false
+      schema:
+        type: string
+      description: Comma-separated CUIs to restrict the search.
     SemanticTypes:
       name: semantic_types
       in: query
@@ -388,6 +552,138 @@ components:
       schema:
         type: string
       description: Comma-separated UMLS semantic types.
+    ExpandSemanticTypesHierarchy:
+      name: expand_semantic_types_hierarchy
+      in: query
+      required: false
+      schema:
+        type: boolean
+      description: Include immediate children of provided semantic types.
+    ExpandClassHierarchy:
+      name: expand_class_hierarchy
+      in: query
+      required: false
+      schema:
+        type: boolean
+      description: Include ancestors based on class hierarchy depth.
+    ClassHierarchyMaxLevel:
+      name: class_hierarchy_max_level
+      in: query
+      required: false
+      schema:
+        type: integer
+        minimum: 0
+      description: Max hierarchy depth for expand_class_hierarchy.
+    ExpandMappings:
+      name: expand_mappings
+      in: query
+      required: false
+      schema:
+        type: boolean
+      description: Use manual mappings (UMLS, REST, CUI, OBOXREF) in annotation.
+    StopWords:
+      name: stop_words
+      in: query
+      required: false
+      schema:
+        type: string
+      description: Comma-separated stop words (case-insensitive).
+    MinimumMatchLength:
+      name: minimum_match_length
+      in: query
+      required: false
+      schema:
+        type: integer
+        minimum: 0
+      description: Minimum match length for annotations.
+    ExcludeNumbers:
+      name: exclude_numbers
+      in: query
+      required: false
+      schema:
+        type: boolean
+      description: Exclude numeric matches.
+    WholeWordOnly:
+      name: whole_word_only
+      in: query
+      required: false
+      schema:
+        type: boolean
+      description: Match whole words only.
+    ExcludeSynonyms:
+      name: exclude_synonyms
+      in: query
+      required: false
+      schema:
+        type: boolean
+      description: Exclude synonyms from matches.
+    LongestOnly:
+      name: longest_only
+      in: query
+      required: false
+      schema:
+        type: boolean
+      description: Return only the longest match for a phrase.
+    InputType:
+      name: input_type
+      in: query
+      required: false
+      schema:
+        type: integer
+        enum: [1, 2]
+      description: 1=text, 2=comma-separated keywords.
+    OutputType:
+      name: output_type
+      in: query
+      required: false
+      schema:
+        type: integer
+        enum: [1, 2]
+      description: 1=ranked ontologies, 2=ranked ontology sets.
+    MaxElementsSet:
+      name: max_elements_set
+      in: query
+      required: false
+      schema:
+        type: integer
+        enum: [2, 3, 4]
+      description: Maximum ontologies per set (output_type=2).
+    WC:
+      name: wc
+      in: query
+      required: false
+      schema:
+        type: number
+        minimum: 0
+        maximum: 1
+      description: Weight for coverage criterion.
+    WA:
+      name: wa
+      in: query
+      required: false
+      schema:
+        type: number
+        minimum: 0
+        maximum: 1
+      description: Weight for acceptance criterion.
+    WD:
+      name: wd
+      in: query
+      required: false
+      schema:
+        type: number
+        minimum: 0
+        maximum: 1
+      description: Weight for detail criterion.
+    WS:
+      name: ws
+      in: query
+      required: false
+      schema:
+        type: number
+        minimum: 0
+        maximum: 1
+      description: Weight for specialization criterion.
 
   responses:
     BadRequest:
