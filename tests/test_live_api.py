@@ -4,10 +4,10 @@ import pytest
 from ontoportal_client import ClientConfig, OntoPortalClient
 
 
-BIOPORTAL_API_KEY = os.getenv("BIOPORTAL_API_KEY")
+ONTOPORTAL_API_KEY = os.getenv("ONTOPORTAL_API_KEY")
 
 pytestmark = pytest.mark.skipif(
-    not BIOPORTAL_API_KEY, reason="BIOPORTAL_API_KEY not set; skipping live API tests"
+    not ONTOPORTAL_API_KEY, reason="ONTOPORTAL_API_KEY not set; skipping live API tests"
 )
 
 

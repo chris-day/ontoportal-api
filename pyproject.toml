@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ontoportal-client"
-version = "0.1.17"
+version = "0.1.20"
 description = "Reusable Python client for OntoPortal/BioPortal REST API"
 readme = "README.md"
 requires-python = ">=3.10"

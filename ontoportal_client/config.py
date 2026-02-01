@@ -18,7 +18,7 @@ class ClientConfig:
     user_agent: str = "ontoportal-client/1.0"
 
     @classmethod
-    def from_env(cls, prefix: str = "BIOPORTAL") -> "ClientConfig":
+    def from_env(cls, prefix: str = "ONTOPORTAL") -> "ClientConfig":
         key = os.getenv(f"{prefix}_API_KEY")
         auth_mode = os.getenv(f"{prefix}_AUTH_MODE", "header")
         base_url = os.getenv(f"{prefix}_BASE_URL", cls.base_url)

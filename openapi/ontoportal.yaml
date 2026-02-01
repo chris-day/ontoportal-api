@@ -7,6 +7,11 @@ info:
     official documentation and observed response structures.
 servers:
   - url: https://data.bioontology.org
+    description: BioPortal — The world's most comprehensive repository of biomedical ontologies
+  - url: https://data.bioportal.lirmm.fr
+    description: SIFR BioPortal — A repository for French biomedical terminologies and ontologies
+  - url: https://data.agroportal.lirmm.fr
+    description: AgroPortal — A vocabulary and ontology repository for agronomy and related domains
 
 security:
   - ApiKeyAuth: []
