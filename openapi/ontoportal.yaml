@@ -12,6 +12,14 @@ servers:
     description: SIFR BioPortal — A repository for French biomedical terminologies and ontologies
   - url: https://data.agroportal.lirmm.fr
     description: AgroPortal — A vocabulary and ontology repository for agronomy and related domains
+  - url: https://data.ecoportal.lifewatch.eu
+    description: EcoPortal — The LifeWatch ERIC repository of semantic resources for ecology and related domains
+  - url: https://data.earthportal.eu
+    description: EarthPortal — A semantic artefact repository dedicated to Earth sciences
+  - url: https://data.biodivportal.gfbio.org
+    description: BiodivPortal — A semantic artefact repository for biodiversity
+  - url: https://data.technoportal.hevs.ch
+    description: TechnoPortal — A repository for the technology sciences domain
 
 security:
   - ApiKeyAuth: []
