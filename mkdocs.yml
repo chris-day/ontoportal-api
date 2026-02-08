@@ -83,3 +83,27 @@ extra_css:
 nav:
   - Home: Home.md
 
+  - Getting Started: Getting-Started.md
+  - Architecture Overview: Architecture-Overview.md
+  - OpenAPI Specification: OpenAPI-Specification.md
+  - Python SDK Quickstart: Python-SDK-Quickstart.md
+
+  - Endpoint Guides:
+      - Overview: Endpoint-Guides.md
+      - Ontologies: Endpoint-Guides-Ontologies.md
+      - Classes: Endpoint-Guides-Classes.md
+      - Search: Endpoint-Guides-Search.md
+      - Annotator: Endpoint-Guides-Annotator.md
+      - Recommender: Endpoint-Guides-Recommender.md
+
+  - Usage Patterns: Usage-Patterns.md
+  - Client SDK Documentation: Client-SDK-Documentation.md
+  - Data and Semantics: Data-and-Semantics.md
+  - Pagination and Hypermedia: Pagination-and-Hypermedia.md
+  - Error Handling and Limits: Error-Handling-and-Limits.md
+  - Testing and Validation: Testing-and-Validation.md
+  - Release and Versioning: Release-and-Versioning.md
+  - Contributing Guide: Contributing-Guide.md
+  - Reference Appendix: Reference-Appendix.md
+
+
