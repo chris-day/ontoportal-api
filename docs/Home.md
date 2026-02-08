@@ -20,10 +20,10 @@ OntoPortal is a platform for hosting and accessing biomedical ontologies. Its RE
 - **Operations**: pagination, errors, testing, release strategy, contribution.
 
 ## Quick links
-- [Getting Started](Getting-Started)
-- [OpenAPI Specification](OpenAPI-Specification)
-- [Python SDK Quickstart](Python-SDK-Quickstart)
-- [Endpoint Guides](Endpoint-Guides)
-- [Usage Patterns](Usage-Patterns)
-- [Client SDK Documentation](Client-SDK-Documentation)
-- [Data and Semantics](Data-and-Semantics)
+- [Getting Started](Getting-Started.md)
+- [OpenAPI Specification](OpenAPI-Specification.md)
+- [Python SDK Quickstart](Python-SDK-Quickstart.md)
+- [Endpoint Guides](Endpoint-Guides.md)
+- [Usage Patterns](Usage-Patterns.md)
+- [Client SDK Documentation](Client-SDK-Documentation.md)
+- [Data and Semantics](Data-and-Semantics.md)

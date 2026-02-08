@@ -1,10 +1,10 @@
 # Endpoint Guide: Annotator
 
 ## Intro
-Back to the endpoint index: [Endpoint Guides](Endpoint-Guides).
+Back to the endpoint index: [Endpoint Guides](Endpoint-Guides.md).
 
 ## Python SDK quickstart
-Need setup help? See [Python SDK Quickstart](Python-SDK-Quickstart). Minimal init:
+Need setup help? See [Python SDK Quickstart](Python-SDK-Quickstart.md). Minimal init:
 ```python
 from ontoportal_client import ClientConfig, OntoPortalClient
 

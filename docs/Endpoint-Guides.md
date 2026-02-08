@@ -12,8 +12,8 @@ The API is organized around a small set of core resource groups:
 - **Recommender**: rank ontologies relevant to input text or keywords.
 
 ## Child pages
-- [Ontologies](Endpoint-Guides-Ontologies)
-- [Classes (Concepts)](Endpoint-Guides-Classes)
-- [Search](Endpoint-Guides-Search)
-- [Annotator](Endpoint-Guides-Annotator)
-- [Recommender](Endpoint-Guides-Recommender)
+- [Ontologies](Endpoint-Guides-Ontologies.md)
+- [Classes (Concepts)](Endpoint-Guides-Classes.md)
+- [Search](Endpoint-Guides-Search.md)
+- [Annotator](Endpoint-Guides-Annotator.md)
+- [Recommender](Endpoint-Guides-Recommender.md)
