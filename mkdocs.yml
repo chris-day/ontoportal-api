@@ -55,6 +55,10 @@ plugins:
       name: title      # use page titles as node labels
       debug: false
 
+  - mermaid2:
+      arguments:
+        theme: forest
+
   # 3. Revision metadata (governance / audit signal)
   - git-revision-date-localized:
       type: iso_date
