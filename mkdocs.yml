@@ -34,13 +34,12 @@ theme:
 # ----------------------------------------------------------------------------
 # Markdown extensions
 # ----------------------------------------------------------------------------
-#markdown_extensions:
-# - admonition
-# - toc:
-#     permalink: true
-# - pymdownx.superfences
-# - pymdownx.highlight
-
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
 # ----------------------------------------------------------------------------
 # Plugins
 # Order matters
@@ -49,11 +48,6 @@ plugins:
   # 1. Search index
   - search:
       lang: en
-
-  - mermaid2:
-      arguments:
-        theme: forest
-
   # 2. Documentation topology graph
   - graph:
       name: title      # use page titles as node labels
