@@ -1,63 +1,56 @@
-name: Build & Publish Documentation
+name: Build and publish documentation
 
 on:
+  pull_request:
   push:
-    branches:
-      - main
+    branches: [main]
   workflow_dispatch:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: "docs-pages"
+  group: docs-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
-          fetch-depth: 0
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - name: Install documentation dependencies
+          python-version: "3.14"
+      - name: Create the repository environment
+        run: python -m venv .venv
+      - name: Install locked dependencies
         run: |
-          pip install \
-            mkdocs \
-            mkdocs-material \
-            mkdocs-mermaid2-plugin \
-            mkdocs-network-graph-plugin \
-            mkdocs-minify-plugin \
-            mkdocs-git-revision-date-localized-plugin 
-
-      - name: Build MkDocs site
+          .venv/bin/python -m pip install -r requirements-docs.txt -r requirements-docs-browser.txt
+          .venv/bin/python -m pip install -e .
+          .venv/bin/python -m pip check
+          .venv/bin/python -m playwright install chromium
+      - name: Build and verify documentation
         run: |
-          mkdocs build --strict
-
-      - name: Upload Pages artefact
-        uses: actions/upload-pages-artifact@v3
+          .venv/bin/zensical build --clean --strict
+          .venv/bin/python scripts/check_docs.py
+          .venv/bin/python scripts/check_docs_browser.py
+          .venv/bin/python -m pytest -q
+      - uses: actions/upload-pages-artifact@v3
+        if: github.event_name != 'pull_request'
         with:
           path: site
 
   deploy:
+    if: github.event_name != 'pull_request'
     needs: build
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
     steps:
-      - name: Deploy to GitHub Pages
+      - uses: actions/deploy-pages@v4
         id: deployment
-        uses: actions/deploy-pages@v4

@@ -1,7 +1,7 @@
 # Release and Versioning
 
 ## Purpose
-Define how the OpenAPI spec and SDKs are versioned and kept compatible.
+Describe a proposed versioning approach for the OpenAPI description and Python client. These guidelines do not represent an enforced release process.
 
 ## Versioning the OpenAPI spec
 Use semantic versioning for the spec: major for breaking changes, minor for additive changes, patch for corrections.

@@ -1,0 +1,340 @@
+{
+  "schema_version": 1,
+  "source_repository": "https://github.com/chris-day/ontoportal-api",
+  "wiki_commit": "d7dec0f62731f8eeea10d9e1291ce5f19d62d7fc",
+  "site_url": "https://chris-day.github.io/ontoportal-api/",
+  "sources": [
+    {
+      "source": "docs/Architecture-Overview.md",
+      "sha256": "b42d2aad179af3f0259fb962f367c772f30f4a94bb0f7f0cf91cec008e7ba8e4",
+      "destination": "docs/Architecture-Overview.md",
+      "disposition": "retain",
+      "reason": "Existing canonical published page; review and correct as needed"
+    },
+    {
+      "source": "docs/Client-SDK-Documentation.md",
+      "sha256": "72e8d32a94181a800486bd685ab005898b5d474bf12f68160a767c45b073edbb",
+      "destination": "docs/Client-SDK-Documentation.md",
+      "disposition": "retain",
+      "reason": "Existing canonical published page; review and correct as needed"
+    },
+    {
+      "source": "docs/Contributing-Guide.md",
+      "sha256": "22fd6067c3451a8d287a5a6f03870bcf7c1b6489c8ccc2df03cee5e843565b55",
+      "destination": "docs/Contributing-Guide.md",
+      "disposition": "retain",
+      "reason": "Existing canonical published page; review and correct as needed"
+    },
+    {
+      "source": "docs/Data-and-Semantics.md",
+      "sha256": "2970f457e6f2ac2d10e5c325681c8ff6e845b71ca2afc36d525f24b6c7d8f22e",
+      "destination": "docs/Data-and-Semantics.md",
+      "disposition": "retain",
+      "reason": "Existing canonical published page; review and correct as needed"
+    },
+    {
+      "source": "docs/Endpoint-Guides-Annotator.md",
+      "sha256": "e7be31de683b8aeb8f0f1404b011cafb1849a395db5539c9b6ccdfd8991c4f8b",
+      "destination": "docs/Endpoint-Guides-Annotator.md",
+      "disposition": "retain",
+      "reason": "Existing canonical published page; review and correct as needed"
+    },
+    {
+      "source": "docs/Endpoint-Guides-Classes.md",
+      "sha256": "5d8f42b70bc40f8b3db67995d8a5e381a581190cdcc547478a1ec5d9592049d9",
+      "destination": "docs/Endpoint-Guides-Classes.md",
+      "disposition": "retain",
+      "reason": "Existing canonical published page; review and correct as needed"
+    },
+    {
+      "source": "docs/Endpoint-Guides-Ontologies.md",
+      "sha256": "cf914c3cb626860a9b3a782a3c0fb02e289afe65f10ca1bd7f6e506a734875c5",
+      "destination": "docs/Endpoint-Guides-Ontologies.md",
+      "disposition": "retain",
+      "reason": "Existing canonical published page; review and correct as needed"
+    },
+    {
+      "source": "docs/Endpoint-Guides-Recommender.md",
+      "sha256": "2c41acf9d0a48fb5e2c3a96ad5f2c9d8670690de4f32fb38be85669d9af6dda0",
+      "destination": "docs/Endpoint-Guides-Recommender.md",
+      "disposition": "retain",
+      "reason": "Existing canonical published page; review and correct as needed"
+    },
+    {
+      "source": "docs/Endpoint-Guides-Search.md",
+      "sha256": "145497b7505d4b3e66c164d3ec9b52b821807b1797175cd493e2ebcbdfc35c52",
+      "destination": "docs/Endpoint-Guides-Search.md",
+      "disposition": "retain",
+      "reason": "Existing canonical published page; review and correct as needed"
+    },
+    {
+      "source": "docs/Endpoint-Guides.md",
+      "sha256": "4da9c39c9711dc00ea6de99baa1c913a2d821fb659afda176e199f61d4e7c08a",
+      "destination": "docs/Endpoint-Guides.md",
+      "disposition": "retain",
+      "reason": "Existing canonical published page; review and correct as needed"
+    },
+    {
+      "source": "docs/Error-Handling-and-Limits.md",
+      "sha256": "44191be9ec3f20a6651e3fa128befd69f9c02233443fff56850d2b7cf714dc3c",
+      "destination": "docs/Error-Handling-and-Limits.md",
+      "disposition": "retain",
+      "reason": "Existing canonical published page; review and correct as needed"
+    },
+    {
+      "source": "docs/Getting-Started.md",
+      "sha256": "6ccd777ea50fb038fe7c0ad5755fcef47fb4ed1085549f8bfe9fb6811c5c0cf9",
+      "destination": "docs/Getting-Started.md",
+      "disposition": "retain",
+      "reason": "Existing canonical published page; review and correct as needed"
+    },
+    {
+      "source": "docs/OpenAPI-Specification.md",
+      "sha256": "be3725613b052da00316a8ea7648c9649d82b4c649908cc20eb5e9c716e01393",
+      "destination": "docs/OpenAPI-Specification.md",
+      "disposition": "retain",
+      "reason": "Existing canonical published page; review and correct as needed"
+    },
+    {
+      "source": "docs/Pagination-and-Hypermedia.md",
+      "sha256": "dad0fec2d7120eb0a27a90eab324f834e9ca26d26bbe7a018dfe66a8d822889f",
+      "destination": "docs/Pagination-and-Hypermedia.md",
+      "disposition": "retain",
+      "reason": "Existing canonical published page; review and correct as needed"
+    },
+    {
+      "source": "docs/Python-SDK-Quickstart.md",
+      "sha256": "05c0587f987cb97158d5d81b88e0b6ffdd328300c5f2decc5f3e784582034a3f",
+      "destination": "docs/Python-SDK-Quickstart.md",
+      "disposition": "retain",
+      "reason": "Existing canonical published page; review and correct as needed"
+    },
+    {
+      "source": "docs/Reference-Appendix.md",
+      "sha256": "6d7935505b3f5c59cd28cfc7f9432f31cadde6775b64161e62586ef55f8b51b9",
+      "destination": "docs/Reference-Appendix.md",
+      "disposition": "retain",
+      "reason": "Existing canonical published page; review and correct as needed"
+    },
+    {
+      "source": "docs/Release-and-Versioning.md",
+      "sha256": "4030356c05403fb052bcc6c1b5d4fddd57ba639030dd434830ef0143ecc60948",
+      "destination": "docs/Release-and-Versioning.md",
+      "disposition": "retain",
+      "reason": "Existing canonical published page; review and correct as needed"
+    },
+    {
+      "source": "docs/Testing-and-Validation.md",
+      "sha256": "ab9bc1042be410e77e97a849509843037021d320bc945d1d33fe756811ca3819",
+      "destination": "docs/Testing-and-Validation.md",
+      "disposition": "retain",
+      "reason": "Existing canonical published page; review and correct as needed"
+    },
+    {
+      "source": "docs/Usage-Patterns.md",
+      "sha256": "67cab661a582ae16e7869685a73701f9dbbb5d0152b2f5afa9648ee120ebb126",
+      "destination": "docs/Usage-Patterns.md",
+      "disposition": "retain",
+      "reason": "Existing canonical published page; review and correct as needed"
+    },
+    {
+      "source": "docs/helper.txt",
+      "sha256": "948507202ae7d684dd2fc2c270abdfa2bfc5d7bb23317ee2753916b9dafe52a0",
+      "destination": null,
+      "disposition": "exclude",
+      "reason": "Untracked local session identifier; private operational metadata"
+    },
+    {
+      "source": "docs/index.md",
+      "sha256": "98265bb3660656eb547d3e1501041b4a04f9f486b3c29546e7e194b54525bad3",
+      "destination": "docs/index.md",
+      "disposition": "retain",
+      "reason": "Existing canonical published page; review and correct as needed"
+    },
+    {
+      "source": "/var/software/gitrepos/ontoportal-api.wiki/Architecture-Overview.md",
+      "sha256": "b42d2aad179af3f0259fb962f367c772f30f4a94bb0f7f0cf91cec008e7ba8e4",
+      "destination": "docs/Architecture-Overview.md",
+      "disposition": "duplicate",
+      "reason": "Wiki content already present in docs; docs links adapted for static site"
+    },
+    {
+      "source": "/var/software/gitrepos/ontoportal-api.wiki/Client-SDK-Documentation.md",
+      "sha256": "72e8d32a94181a800486bd685ab005898b5d474bf12f68160a767c45b073edbb",
+      "destination": "docs/Client-SDK-Documentation.md",
+      "disposition": "duplicate",
+      "reason": "Wiki content already present in docs; docs links adapted for static site"
+    },
+    {
+      "source": "/var/software/gitrepos/ontoportal-api.wiki/Contributing-Guide.md",
+      "sha256": "22fd6067c3451a8d287a5a6f03870bcf7c1b6489c8ccc2df03cee5e843565b55",
+      "destination": "docs/Contributing-Guide.md",
+      "disposition": "duplicate",
+      "reason": "Wiki content already present in docs; docs links adapted for static site"
+    },
+    {
+      "source": "/var/software/gitrepos/ontoportal-api.wiki/Data-and-Semantics.md",
+      "sha256": "2970f457e6f2ac2d10e5c325681c8ff6e845b71ca2afc36d525f24b6c7d8f22e",
+      "destination": "docs/Data-and-Semantics.md",
+      "disposition": "duplicate",
+      "reason": "Wiki content already present in docs; docs links adapted for static site"
+    },
+    {
+      "source": "/var/software/gitrepos/ontoportal-api.wiki/Endpoint-Guides-Annotator.md",
+      "sha256": "19651302d8c411f1722a00843b0f211fb40d18e1392338f0464b097b3973058e",
+      "destination": "docs/Endpoint-Guides-Annotator.md",
+      "disposition": "duplicate",
+      "reason": "Wiki content already present in docs; docs links adapted for static site"
+    },
+    {
+      "source": "/var/software/gitrepos/ontoportal-api.wiki/Endpoint-Guides-Classes.md",
+      "sha256": "d2127cbf28e248dfeb84a9a35b9862e858efe6df734086fa726a6972905d3813",
+      "destination": "docs/Endpoint-Guides-Classes.md",
+      "disposition": "duplicate",
+      "reason": "Wiki content already present in docs; docs links adapted for static site"
+    },
+    {
+      "source": "/var/software/gitrepos/ontoportal-api.wiki/Endpoint-Guides-Ontologies.md",
+      "sha256": "003ef69e2999320cc7494e2f795d0e3a728592261e9d0ab0da9dd99322f53dae",
+      "destination": "docs/Endpoint-Guides-Ontologies.md",
+      "disposition": "duplicate",
+      "reason": "Wiki content already present in docs; docs links adapted for static site"
+    },
+    {
+      "source": "/var/software/gitrepos/ontoportal-api.wiki/Endpoint-Guides-Recommender.md",
+      "sha256": "d292f23de917441cd844d3c709fd4dc802a2fde21a7c6135c15dd2494d5c57f2",
+      "destination": "docs/Endpoint-Guides-Recommender.md",
+      "disposition": "duplicate",
+      "reason": "Wiki content already present in docs; docs links adapted for static site"
+    },
+    {
+      "source": "/var/software/gitrepos/ontoportal-api.wiki/Endpoint-Guides-Search.md",
+      "sha256": "b63d829fde90aa84029a204520d317f9f24d2ea14ead46f5920dadf64e0b6c53",
+      "destination": "docs/Endpoint-Guides-Search.md",
+      "disposition": "duplicate",
+      "reason": "Wiki content already present in docs; docs links adapted for static site"
+    },
+    {
+      "source": "/var/software/gitrepos/ontoportal-api.wiki/Endpoint-Guides.md",
+      "sha256": "15d5a3fd303e4c08d2779401dff5778bdd2eddf64e063275ca5d96ad363c1874",
+      "destination": "docs/Endpoint-Guides.md",
+      "disposition": "duplicate",
+      "reason": "Wiki content already present in docs; docs links adapted for static site"
+    },
+    {
+      "source": "/var/software/gitrepos/ontoportal-api.wiki/Error-Handling-and-Limits.md",
+      "sha256": "44191be9ec3f20a6651e3fa128befd69f9c02233443fff56850d2b7cf714dc3c",
+      "destination": "docs/Error-Handling-and-Limits.md",
+      "disposition": "duplicate",
+      "reason": "Wiki content already present in docs; docs links adapted for static site"
+    },
+    {
+      "source": "/var/software/gitrepos/ontoportal-api.wiki/Getting-Started.md",
+      "sha256": "6ccd777ea50fb038fe7c0ad5755fcef47fb4ed1085549f8bfe9fb6811c5c0cf9",
+      "destination": "docs/Getting-Started.md",
+      "disposition": "duplicate",
+      "reason": "Wiki content already present in docs; docs links adapted for static site"
+    },
+    {
+      "source": "/var/software/gitrepos/ontoportal-api.wiki/Home.md",
+      "sha256": "0c0f21b36d8b515bc2cb19f79225e8bcc1f06f432beb75527b845c701075792d",
+      "destination": "docs/index.md",
+      "disposition": "duplicate",
+      "reason": "Wiki content already present in docs; docs links adapted for static site"
+    },
+    {
+      "source": "/var/software/gitrepos/ontoportal-api.wiki/OpenAPI-Specification.md",
+      "sha256": "be3725613b052da00316a8ea7648c9649d82b4c649908cc20eb5e9c716e01393",
+      "destination": "docs/OpenAPI-Specification.md",
+      "disposition": "duplicate",
+      "reason": "Wiki content already present in docs; docs links adapted for static site"
+    },
+    {
+      "source": "/var/software/gitrepos/ontoportal-api.wiki/Pagination-and-Hypermedia.md",
+      "sha256": "dad0fec2d7120eb0a27a90eab324f834e9ca26d26bbe7a018dfe66a8d822889f",
+      "destination": "docs/Pagination-and-Hypermedia.md",
+      "disposition": "duplicate",
+      "reason": "Wiki content already present in docs; docs links adapted for static site"
+    },
+    {
+      "source": "/var/software/gitrepos/ontoportal-api.wiki/Python-SDK-Quickstart.md",
+      "sha256": "05c0587f987cb97158d5d81b88e0b6ffdd328300c5f2decc5f3e784582034a3f",
+      "destination": "docs/Python-SDK-Quickstart.md",
+      "disposition": "duplicate",
+      "reason": "Wiki content already present in docs; docs links adapted for static site"
+    },
+    {
+      "source": "/var/software/gitrepos/ontoportal-api.wiki/Reference-Appendix.md",
+      "sha256": "6d7935505b3f5c59cd28cfc7f9432f31cadde6775b64161e62586ef55f8b51b9",
+      "destination": "docs/Reference-Appendix.md",
+      "disposition": "duplicate",
+      "reason": "Wiki content already present in docs; docs links adapted for static site"
+    },
+    {
+      "source": "/var/software/gitrepos/ontoportal-api.wiki/Release-and-Versioning.md",
+      "sha256": "4030356c05403fb052bcc6c1b5d4fddd57ba639030dd434830ef0143ecc60948",
+      "destination": "docs/Release-and-Versioning.md",
+      "disposition": "duplicate",
+      "reason": "Wiki content already present in docs; docs links adapted for static site"
+    },
+    {
+      "source": "/var/software/gitrepos/ontoportal-api.wiki/Testing-and-Validation.md",
+      "sha256": "ab9bc1042be410e77e97a849509843037021d320bc945d1d33fe756811ca3819",
+      "destination": "docs/Testing-and-Validation.md",
+      "disposition": "duplicate",
+      "reason": "Wiki content already present in docs; docs links adapted for static site"
+    },
+    {
+      "source": "/var/software/gitrepos/ontoportal-api.wiki/Usage-Patterns.md",
+      "sha256": "67cab661a582ae16e7869685a73701f9dbbb5d0152b2f5afa9648ee120ebb126",
+      "destination": "docs/Usage-Patterns.md",
+      "disposition": "duplicate",
+      "reason": "Wiki content already present in docs; docs links adapted for static site"
+    },
+    {
+      "source": "/var/software/gitrepos/ontoportal-api.wiki/_Sidebar.md",
+      "sha256": "ce6359a373e74902b0b545aa37c36d4ced1d48c2e214dc4a40559738de8359b6",
+      "destination": "zensical.toml",
+      "disposition": "input-only",
+      "reason": "Navigation source; do not publish as page"
+    },
+    {
+      "source": "/var/software/gitrepos/ontoportal-api.wiki/helper.txt",
+      "sha256": "948507202ae7d684dd2fc2c270abdfa2bfc5d7bb23317ee2753916b9dafe52a0",
+      "destination": null,
+      "disposition": "exclude",
+      "reason": "Local session identifier; private operational metadata"
+    },
+    {
+      "source": "README.md",
+      "sha256": "63c6ca8608827044c452f6038aff11769f5198988a8251c6eb9486ebf0078d9d",
+      "destination": "README.md",
+      "disposition": "retain",
+      "reason": "Repository landing page and source for project essentials"
+    },
+    {
+      "source": "mkdocs.yml",
+      "sha256": "04475f1611737590d90c4b0998a5fe8f70fe5329e5fdacceb91f7ed350dbfcd9",
+      "destination": null,
+      "disposition": "legacy-config",
+      "reason": "Retained for rollback; Zensical uses zensical.toml"
+    },
+    {
+      "source": "/var/software/gitrepos/favicon.png",
+      "sha256": "700ac014ff753785547d3702dd40b34bea895e8d0fbcaead1f6e004d0117050f",
+      "destination": "docs/assets/images/favicon.png",
+      "disposition": "copy",
+      "reason": "User-supplied favicon"
+    }
+  ],
+  "created": [
+    {
+      "path": "docs/Documentation-Maintenance.md",
+      "reason": "New contributor guide for Zensical, privacy behavior, deployment, and rollback"
+    },
+    {
+      "path": "docs/assets/images/favicon.png",
+      "reason": "Copy of the supplied favicon; not an unrelated generated icon"
+    }
+  ]
+}

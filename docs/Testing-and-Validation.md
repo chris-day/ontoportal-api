@@ -8,7 +8,7 @@ Explain how to test SDK behavior and validate against the OpenAPI spec.
 - Validate headers, query parameters, and request composition.
 
 ## Contract testing with OpenAPI
-- Validate requests and responses against `openapi.yaml`.
+- `openapi/ontoportal.yaml` is the source specification. Contract validation is a recommended extension, not an existing automated test.
 - Treat schema changes as contract changes.
 
 ## Mock servers from the spec

@@ -1,0 +1,45 @@
+[project]
+site_name = "OntoPortal API and Python Client"
+site_description = "OpenAPI reference and Python client guides for OntoPortal and BioPortal APIs."
+site_author = "Chris Day"
+site_url = "https://chris-day.github.io/ontoportal-api/"
+repo_url = "https://github.com/chris-day/ontoportal-api"
+docs_dir = "docs"
+site_dir = "site"
+use_directory_urls = false
+exclude_docs = "helper.txt\n"
+copyright = "Copyright &copy; 2026 Chris Day – <a href=\"#__consent\">Change cookie settings</a>"
+nav = [
+  { "Home" = "index.md" },
+  { "Getting started" = ["Getting-Started.md", "Python-SDK-Quickstart.md"] },
+  { "API and client" = ["OpenAPI-Specification.md", "Client-SDK-Documentation.md", "Endpoint-Guides.md", "Endpoint-Guides-Ontologies.md", "Endpoint-Guides-Classes.md", "Endpoint-Guides-Search.md", "Endpoint-Guides-Annotator.md", "Endpoint-Guides-Recommender.md"] },
+  { "Guides" = ["Usage-Patterns.md", "Pagination-and-Hypermedia.md", "Error-Handling-and-Limits.md"] },
+  { "Architecture and semantics" = ["Architecture-Overview.md", "Data-and-Semantics.md"] },
+  { "Project" = ["Testing-and-Validation.md", "Release-and-Versioning.md", "Contributing-Guide.md", "Reference-Appendix.md", "Documentation-Maintenance.md"] },
+]
+
+[project.theme]
+favicon = "assets/images/favicon.png"
+font = false
+features = ["search.highlight", "search.suggest", "content.code.copy"]
+
+[project.extra]
+generator = false
+
+[project.extra.consent]
+title = "Cookie settings"
+description = "This documentation uses local storage to remember your preferences and provide search. GitHub content is requested only if you allow it. No analytics are configured."
+actions = ["accept", "reject", "manage"]
+
+[project.extra.consent.cookies]
+github = { name = "GitHub content", checked = false }
+
+[project.plugins.search]
+
+[project.plugins.llmstxt]
+full_output = "llms-full.txt"
+sections = { "Getting started" = ["index.md", "Getting-Started.md", "Python-SDK-Quickstart.md"], "API and client" = ["OpenAPI-Specification.md", "Client-SDK-Documentation.md", "Endpoint-Guides.md", "Endpoint-Guides-Ontologies.md", "Endpoint-Guides-Classes.md", "Endpoint-Guides-Search.md", "Endpoint-Guides-Annotator.md", "Endpoint-Guides-Recommender.md"], "Guides" = ["Usage-Patterns.md", "Pagination-and-Hypermedia.md", "Error-Handling-and-Limits.md"], "Architecture and semantics" = ["Architecture-Overview.md", "Data-and-Semantics.md"], "Project" = ["Testing-and-Validation.md", "Release-and-Versioning.md", "Contributing-Guide.md", "Reference-Appendix.md", "Documentation-Maintenance.md"] }
+
+[project.validation]
+invalid_links = true
+invalid_link_anchors = true

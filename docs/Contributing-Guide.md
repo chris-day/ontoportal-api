@@ -1,5 +1,7 @@
 # Contributing Guide
 
+The canonical license is the [BSD 2-Clause License in the repository](https://github.com/chris-day/ontoportal-api/blob/main/LICENSE).
+
 ## Purpose
 Explain how to contribute to the SDKs and OpenAPI spec safely.
 

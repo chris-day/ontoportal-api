@@ -12,13 +12,13 @@ The API uses an API key provided via:
 - Header `Authorization: apikey token=YOUR_KEY`
 
 ## Download and use the OpenAPI YAML
-The repo ships a versioned `openapi.yaml` under `openapi/`. Use it with:
+The repository ships `openapi/ontoportal.yaml` and a generated `openapi/ontoportal.json`. Use either with:
 - Swagger UI
 - Redoc
 - Postman
 
 ## Swagger UI / Redoc / Postman usage
-1) Import `openapi.yaml`.
+1) Import `openapi/ontoportal.yaml` or `openapi/ontoportal.json`.
 2) Configure the API key.
 3) Use sample endpoints like `/search` and `/ontologies`.
 
@@ -30,4 +30,4 @@ The repo ships a versioned `openapi.yaml` under `openapi/`. Use it with:
 ## Assumptions (where official docs are implicit)
 - Default content type is JSON-LD, even if clients treat it as normal JSON.
 - Paging is supported via `page`/`pagesize` and hypermedia links.
-- Annotator and Recommender do not support `include` expansions.
+- The published API can differ from this repository's model; validate endpoint behavior against the live API before relying on optional parameters.

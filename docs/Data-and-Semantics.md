@@ -23,6 +23,6 @@ Classes may include:
 JSON-LD fields (`@id`, `@type`) connect API responses to linked-data semantics. Clients can treat responses as plain JSON but still benefit from URI-based identity.
 
 ## Mapping API responses to RDF/ontology concepts
-- `@id` corresponds to the class IRI.
+- `@id` identifies the API resource; the underlying ontology class IRI may appear in a separate field.
 - `@type` represents the resource type.
 - Hypermedia links represent relationships in the ontology.

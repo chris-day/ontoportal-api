@@ -33,7 +33,7 @@ curl "https://data.bioontology.org/search?q=melanoma&apikey=YOUR_KEY"
 ```bash
 python -m venv .venv
 source .venv/bin/activate
-pip install requests
+pip install -e .
 ```
 
 ### Other languages

@@ -12,14 +12,14 @@ pip install ontoportal-client
 
 ### Client initialization
 ```python
-from ontoportal_client import Client
-client = Client(api_key="YOUR_KEY")
+from ontoportal_client import ClientConfig, OntoPortalClient
+client = OntoPortalClient(ClientConfig(api_key="YOUR_KEY"))
 ```
 
 ### Common usage
 ```python
-results = client.search(q="melanoma", require_exact_match=True)
+results = client.search("melanoma", require_exact_match=True)
 ```
 
 ## Notes
-The official SDK is currently available for Python. Other languages can call the REST API directly using standard HTTP clients.
+This repository provides a Python client. Other languages can call the REST API directly using standard HTTP clients.
