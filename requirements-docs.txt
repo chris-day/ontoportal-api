@@ -6,11 +6,11 @@ Markdown==3.11.2
 MarkupSafe==3.0.4
 packaging==26.3
 pathspec==1.1.1
-pip==26.2.1
+pip==26.2.2
 Pygments==2.21.0
 pymdown-extensions==12.3
 PyYAML==6.0.3
-setuptools==84.2.0
+setuptools==84.2.1
 tomli==2.5.0
 wheel==0.48.0
 zensical==0.0.71

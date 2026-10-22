@@ -9,7 +9,8 @@ Use the repository's existing `.venv` and a compatible Python (the migration was
 ```bash
 python3.14 -m venv .venv  # only if .venv does not already exist
 .venv/bin/python -m pip install -r requirements-docs.txt
-.venv/bin/python -m pip install -e .
+.venv/bin/python -m pip install -r requirements-docs-browser.txt -r requirements-dev.txt
+.venv/bin/python -m pip install -e '.[dev]'
 .venv/bin/zensical serve
 ```
 
@@ -23,19 +24,22 @@ Build and validate with:
 
 The local preview is served at `http://localhost:8000/` by default. The configured production base URL is `https://chris-day.github.io/ontoportal-api/`, established from the existing GitHub Pages workflow and a successful HTTP response. A successful local build does not publish the site.
 
-To refresh the pinned dependency closures, upgrade the relevant packages in the existing `.venv`, regenerate both lock files, and verify them:
+To refresh the pinned dependency closures, upgrade the relevant packages in the existing `.venv`, regenerate all three requirements files, and verify them:
 
 ```bash
-.venv/bin/python -m pip install --upgrade zensical playwright pip setuptools wheel
+.venv/bin/python -m pip install --upgrade --force-reinstall zensical
+.venv/bin/python -m pip install --upgrade playwright pip setuptools wheel pytest requests
 .venv/bin/python scripts/update_docs_lock.py
-.venv/bin/python -m pip install -r requirements-docs.txt -r requirements-docs-browser.txt
+.venv/bin/python -m pip install -r requirements-docs.txt -r requirements-docs-browser.txt -r requirements-dev.txt
+.venv/bin/python -m pip install -e '.[dev]'
 .venv/bin/python -m pip check
 .venv/bin/zensical build --clean --strict
 .venv/bin/python scripts/check_docs.py
+.venv/bin/python scripts/check_docs_browser.py
 .venv/bin/python -m pytest -q
 ```
 
-The lock generator follows installed package metadata to pin the full documentation and browser dependency closures. Review its diff and run the browser checker before accepting a lock update. CI installs these files in its own checkout environment.
+The lock generator follows installed package metadata to pin the documentation, browser, and development dependency closures. Playwright currently requires `pyee<15`, so the browser requirements retain pyee 14. Review the diff and run the browser checker before accepting a lock update. CI installs these files in its own checkout environment.
 
 ## Privacy and services
 
