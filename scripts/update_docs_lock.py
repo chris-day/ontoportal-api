@@ -38,6 +38,6 @@ def write(path: str, roots: set[str], comment: str) -> None:
     print(f'{path}: {len(packages)} pinned packages')
 
 
-write('requirements-docs.txt', {'zensical', 'pip', 'setuptools', 'wheel'}, 'Validated documentation dependency closure on Python 3.14.')
+write('requirements-docs.txt', {'zensical', 'pip', 'setuptools', 'wheel'}, 'Validated documentation dependency closure on Python 3.14.10.')
 write('requirements-docs-browser.txt', {'playwright'}, 'Optional browser verification dependencies for the same repository .venv.')
-write('requirements-dev.txt', {'pytest', 'requests'}, 'Python 3.14 development and client dependency closure; install with the documentation requirements.')
+write('requirements-dev.txt', {'pytest', 'requests'}, 'Python 3.14.10 development and client dependency closure; install with the documentation requirements.')
